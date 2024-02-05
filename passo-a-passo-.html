@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passo-a-apsso Git</title>
+</head>
+<body>
+    <h1>Passo-a-passo Git</h1>
+    <hr>
+    <p>Para começar a usar o Git é preciso colocar informações em dois comandos:</p>
+    <blockquote><b>git config --global user.name "nomedeusuario"</b></blockquote>
+    <blockquote><b>git config --global user.email "email@mail.com"</b></blockquote>
+    <p>O comando <b>git init</b> serve para inicializar um novo repositório Git local na pasta atual.</p>
+    <p>O comando <b>git status</b> serve para ver o status das informações dentro do Git.</p>
+    <blockquote><b>Untracked files</b> significa que o arquivo ainda não foi trackeado para dentro do git.</blockquote>
+    <blockquote><b>Changes to be commited</b> significa que o arquivo está preparado para ser commitado.</blockquote>
+    <p>O comando <b>git add 'nomedoarquivo'</b> ou <b>git add .</b> serve para colocar o arquivo na área de preparação do Git - área de stage, deixando-o pronto para ser commitado.</p>
+    <p>O comando <b>git commit -m "mensagem explicativa"</b> serve para gravar as alterações colocadas na área de stage criando uma nova versão do projeto.</p>
+    <p>O comando <b>git log</b> serve para saber o histórico de versões existentes no projeto.</p>
+    <blockquote>O <b>HEAD</b> serve para nos dizer qual a versão do projeto está sendo trabalhada no momento.</blockquote>
+    <blockquote>Para voltar a trabalhar em uma versão anterior do projeto utiliza-se o comando <b>git checkout id-da-versao-a-ser-requerida</b>.</blockquote>
+    <blockquote>O comando <b>git log --all</b> mostra todos os commits feitos.</blockquote>
+    <blockquote>O comando <b>git checkout branch-principal</b> faz voltar o HEAD para a última versão criada.</blockquote>
+    <p>Quando o terminal não volta a mostrar a área de inserção de comandos, basta teclar a seta pra baixo até aparecer na tela END, e então digitar Q.</p>
+    <p>O comando <b>git checkout -b nome-da-branch</b> serve tanto para criar uma nova branch diferente da principal como para direcionar o projeto para uma branch.</p>
+    <p>O comando <b>git branch</b> mostra as branchs existentes no projeto.</p>
+    <p>O comando <b>git merge nome-da-branch</b> adiciona o conteúdo da branch com o conteúdo da branch principal.</p>
+    <hr>
+    <h1>Para enviar os repositórios para o GitHub</h1>
+    <hr>
+    <p>Primeiro, é preciso criar um novo repositório no GitHub.</p>
+    <p>Depois entra com o comando <b>git remote add origin link-do-repo-github</b>.</p>
+    <p>O comando <b>git branch -M main</b> renomeia a branch principal para ficar de acordo com a branch principal do GitHub.</p>
+    <p>Por fim, entra com o comando <b>git push -u origin nome-da-branch-principal</b> para 'empurrar' o repositório para o GitHub.</p>
+    <p>Para adicionar novas alterações basta commitar as alterações na máquina e enviar para o GitHub com o comando <b>git push</b>.</p>
+    <hr>
+    <h1>Para baixar repositórios do GitHub para a máquina</h1>
+    <hr>
+    <p>Utiliza-se o comando <b>git clone url-do-projeto-no-github</b>.</p>
+    <hr>
+    <h1>Para trabalhar em equipe.</h1>
+    <hr>
+    <p>Faz um <b>fork</b> no GitHub, clona o projeto na máquina, abre no VSCode com o comando <b>code .</b>, cria uma nova branch para trabalhar nela, faz as alterações necessárias no projeto, adiciona essas alterações na área de stage através do <b>git add .</b>, comita as alterações, envia/empurra para o GitHub através do <b>git push origin nome-da-branch-criada</b> e faz o pullrequest no GitHub.</p>
+    <p>Para fazer o pullrequest no GitHub clica em contribute e OpenPullRequest, e envia as alterações para serem aprovadas ou não pelo administrador do projeto.</p>
+</body>
+</html>
